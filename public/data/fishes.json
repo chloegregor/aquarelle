@@ -1,0 +1,42 @@
+[
+  {
+    "species":"rasbora maculata",
+    "origin":"asia",
+    "minIndividuals": 6,
+    "temp": [22,28],
+    "minTankSize": 30,
+    "minusLiters": 10
+  },
+  {
+    "species":"neon tetra",
+    "origin":"south america",
+    "minIndividuals": 6,
+    "temp": [20,26],
+    "minTankSize": 100,
+    "minusLiters": 30
+  },
+  {
+    "species":"betta splendens",
+    "origin":"asia",
+    "minIndividuals": 1,
+    "temp": [24, 30],
+    "minTankSize": 30,
+    "minusLiters": 10
+  },
+  {
+    "species":"gourami nain",
+    "origin":"asia",
+    "minIndividuals": 2,
+    "temp": [24,28],
+    "minTankSize": 60,
+    "minusLiters": 30
+  },
+  {
+    "species":"rasbora espei",
+    "origin":"asia",
+    "minIndividuals": 6,
+    "temp": [22,28],
+    "minTankSize": 50,
+    "minusLiters": 30
+  }
+]
