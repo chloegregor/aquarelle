@@ -30,7 +30,8 @@ export function FilteredFishes({tankVolume}) {
 
   const isSelectable = (fish) => {
     return (
-      fish.minTankSize <= newVolume
+      fish.minTankSize <= tankVolume
+      && (newVolume - fish.minusLiters) >= 0
     )
   }
 
@@ -43,14 +44,31 @@ export function FilteredFishes({tankVolume}) {
     <div className="flex gap-5 ">
       {fishes.map ((fish) => (
         <div key={fish.species} className={`  ${isSelectable(fish) ? '' : 'grayscale'}`}
-        onClick={() => {
-          if (isSelectable(fish)) {
-            setAddedFish([...addedFish, fish]);
-          }
-        }}
+
         >
           <h2>{fish.species}</h2>
           <Image src="/images/maxresdefault.jpg" alt={fish.species} width={200} height={200} />
+          <div className="flex justify-center gap-5 picnic text-[3em]">
+
+            <span className="bleu" onClick={() => {
+              if (isSelectable(fish)) {
+                setAddedFish([...addedFish, fish]);
+              }
+            }}>+
+            </span>
+            <span className="rouge" onClick ={() => {
+              const index = addedFish.findIndex(f => f.species === fish.species);
+              if (index > -1) {
+                const newAddedFish = [...addedFish];
+                newAddedFish.splice(index, 1);
+                setAddedFish(newAddedFish);
+              }
+            }}>
+              -
+            </span>
+
+
+          </div>
         </div>
 
       ))}
