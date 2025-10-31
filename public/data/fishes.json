@@ -1,7 +1,7 @@
 [
   {
     "species":"rasbora maculata",
-    "origin":"asia",
+    "region":"asia",
     "minIndividuals": 6,
     "minTemp": 22,
     "maxTemp": 28,
@@ -13,7 +13,7 @@
   },
   {
     "species":"neon tetra",
-    "origin":"south america",
+    "region":"south america",
     "minIndividuals": 6,
     "minTemp": 20,
     "maxTemp": 26,
@@ -24,7 +24,7 @@
   },
   {
     "species":"betta splendens",
-    "origin":"asia",
+    "region":"asia",
     "minIndividuals": 1,
     "minTemp": 24,
     "maxTemp": 30,
@@ -35,7 +35,7 @@
   },
   {
     "species":"gourami nain",
-    "origin":"asia",
+    "region":"asia",
     "minIndividuals": 2,
     "minTemp": 24,
     "maxTemp": 28,
@@ -46,7 +46,7 @@
   },
   {
     "species":"rasbora espei",
-    "origin":"asia",
+    "region":"asia",
     "minIndividuals": 6,
     "minTemp": 22,
     "maxTemp": 28,
