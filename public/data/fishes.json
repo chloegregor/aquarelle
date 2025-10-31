@@ -3,31 +3,44 @@
     "species":"rasbora maculata",
     "origin":"asia",
     "minIndividuals": 6,
-    "temp": [22,28],
+    "minTemp": 22,
+    "maxTemp": 28,
+    "minPh": 6,
+    "maxPh": 7.5,
     "minTankSize": 30,
     "minusLiters": 10
+
   },
   {
     "species":"neon tetra",
     "origin":"south america",
     "minIndividuals": 6,
-    "temp": [20,26],
+    "minTemp": 20,
+    "maxTemp": 26,
+    "minPh": 6,
+    "maxPh": 7,
     "minTankSize": 100,
-    "minusLiters": 30
+    "minusLiters": 12
   },
   {
     "species":"betta splendens",
     "origin":"asia",
     "minIndividuals": 1,
-    "temp": [24, 30],
+    "minTemp": 24,
+    "maxTemp": 30,
+    "minPh": 6,
+    "maxPh": 8,
     "minTankSize": 30,
-    "minusLiters": 10
+    "minusLiters": 5
   },
   {
     "species":"gourami nain",
     "origin":"asia",
     "minIndividuals": 2,
-    "temp": [24,28],
+    "minTemp": 24,
+    "maxTemp": 28,
+    "minPh": 6,
+    "maxPh": 7.5,
     "minTankSize": 60,
     "minusLiters": 30
   },
@@ -35,8 +48,11 @@
     "species":"rasbora espei",
     "origin":"asia",
     "minIndividuals": 6,
-    "temp": [22,28],
+    "minTemp": 22,
+    "maxTemp": 28,
+    "minPh": 6,
+    "maxPh": 7.5,
     "minTankSize": 50,
-    "minusLiters": 30
+    "minusLiters": 20
   }
 ]

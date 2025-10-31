@@ -1,25 +1,27 @@
 'use client';
 import {useState, useEffect} from "react";
 
-export function Population({fish, newVolume}) {
+export function Population({fish, volume}) {
 
-  const fishesMinusLiters = fish.map(f => f.minusLiters || 0).reduce((a, b) => a + b, 0);
+  const fishes = Object.entries(fish);
 
-
-
+  const isNotEnoughVolume = () => {
+    return volume < 0 ?
+   "Le volume de l'aquarium n'est pas suffisant pour cette population." :
+     null;
+  }
 
   return (
     <>
       <div>
-        <h2>Population de l'aquarium:</h2>
+        <p>{isNotEnoughVolume(volume)}</p>
         <ul>
-          {fish.map((f, index) => (
-            <li key={index}>{f.species}</li>
+          {fishes.map(([species, count]) => (
+            <li key={species}>{species}: {count}</li>
           ))}
         </ul>
       </div>
       <div>
-        <h3>Volume disponible: {newVolume} litres</h3>
       </div>
     </>
   );
