@@ -8,7 +8,7 @@
     "minPh": 6,
     "maxPh": 7.5,
     "minTankSize": 30,
-    "minusLiters": 10
+    "minusLiters": 15
 
   },
   {
@@ -20,7 +20,7 @@
     "minPh": 6,
     "maxPh": 7,
     "minTankSize": 100,
-    "minusLiters": 12
+    "minusLiters": 25
   },
   {
     "species":"betta splendens",
@@ -31,7 +31,7 @@
     "minPh": 6,
     "maxPh": 8,
     "minTankSize": 30,
-    "minusLiters": 5
+    "minusLiters": 10
   },
   {
     "species":"gourami nain",

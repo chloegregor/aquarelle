@@ -5,13 +5,15 @@ import { AquariumApp } from "./components/aquariumApp.jsx";
 export default function Home() {
   return (
     <>
-    <header>
-      <span className="text-center m-b-8">
+    <header className="h-[10%]">
+      <div className="text-center ">
         <h1>aquarelle</h1>
         <h2>pour un aquarium sans filtre !</h2>
-      </span>
+      </div>
     </header>
+    <main className=" h-[90%] ">
       <AquariumApp />
+    </main>
     </>
   );
 }

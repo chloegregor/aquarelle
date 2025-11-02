@@ -16,7 +16,7 @@ export function Population({fish, volume, minimumVolume, originalVolume}) {
 
   return (
     <>
-      <div>
+      <div className="border">
         <p>{isNotEnoughVolume(volume)}</p>
         <ul>
           {fishes.map(([species, count]) => (
