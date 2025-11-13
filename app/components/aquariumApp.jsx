@@ -10,7 +10,7 @@ export function AquariumApp() {
   return (
     <>
 
-      <div className="flex flex-col lg:gap-10 gap-5 absolute bottom-0 border border-gray-300 w-full items-center lg:h-[10em] h-[8em] bg-white px-[5px]">
+      <div className="flex flex-col lg:gap-3  absolute bottom-0 border border-gray-300 w-full items-center lg:h-[8em] h-[8em] bg-white px-[5px]">
         <div className="flex lg:gap-10 gap-5">
           <div className="flex flex-col">
             <label htmlFor="tankVolume">{tankVolume} litres</label>
@@ -60,7 +60,7 @@ export function AquariumApp() {
             }}>
               <option value="">Toutes</option>
               <option value="asia">Asie</option>
-              <option value="south america">Amérique du sud</option>
+              <option value="south america">Amazonie</option>
             </select>
           </div>
         </div>

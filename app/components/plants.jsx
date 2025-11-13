@@ -13,7 +13,7 @@ export function Plants({img, absolute, width, rotate, }) {
   const inverseRotate = rotate === 'rotateInLeft' ? 'rotateOutLeft' : rotate === 'rotateInRight' ?  'rotateOutRight' : '';
 
   return (
-<div className ={ ` absolute ${absolute} ${isClicked ? rotate : isClicked === false ? inverseRotate : ""}`} onClick={onClick}>
+<div className ={` absolute ${absolute} ${isClicked ? rotate : isClicked === false ? inverseRotate : ""}`} onClick={onClick}>
   <Image src={`/images/${img}`}alt="plant" width={300} height={300} className={width}/>
 </div>  )
 }
