@@ -32,9 +32,9 @@ export default async function Home() {
           <p className="">  Le simulateur vous permet de visualiser la population et la cohabitation des espèces, et de filtrer vos poissons par taille d’aquarium, pH, température et provenance. Il vous aide à prévoir un bac équilibré avant même d’y placer vos poissons. Cependant, il reste à titre indicatif. Un ecosystème ne peut pas être résumé à un algorythme, il convient de peupler votre bac progressivement et de l'observer attentivement !</p>
           <Link href="/simulateur" className=" text-[2em] bouton mt-[3em]">simulateur</Link>
           <Plants   img={plants[0].img} width={"lg:w-[33em] w-[10em]"} absolute={"lg:-top-80 -top-55 -left-30 lg:-left-119"}  rotate={"rotateInRight"} key={plants[0].index} />
-          <Plants   img={plants[3].img} width={"lg:w-[35em] w-[11em]"} absolute={"lg:-top-50 top-60 -right-25 lg:-right-103"}  rotate={"rotateInRight"} key={plants[3].index} />
+          <Plants   img={plants[3].img} width={"lg:w-[35em] w-[11em]"} absolute={"lg:-top-50 top-60 -right-25 lg:-right-103 hidden lg:block"}  rotate={"rotateInRight"} key={plants[3].index} />
           <Plants   img={plants[2].img} width={"lg:w-[25em] w-[6em]"} absolute={"lg:top-90 lg:-left-120 lg:block hidden "}  rotate={""} key={plants[4].index} />
-          <Plants  img={plants[4].img} width={"lg:w-[25em] w-[13em]"} absolute={" lg:top-180 top-340 lg:-right-30 -right-15 scale-x-[-1] "}  rotate={"rotateInLeft"} key={plants[1].index} />
+          <Plants  img={plants[4].img} width={"lg:w-[25em] w-[13em]"} absolute={" lg:top-180 top-340 lg:-right-30 -right-15 scale-x-[-1] hidden lg:block"}  rotate={"rotateInLeft"} key={plants[1].index} />
         </div>
       </div>
     </main>
