@@ -15,6 +15,12 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Aquarelle - pour un aquarium sans filtre",
   description: "Si vous êtes intéréssé par l'aquariophophilie naturelle, sans machine et sans changement d'eau, testez notre simulateur d'aquarium !",
+  openGraph: {
+    title: "Aquarelle - pour un aquarium sans filtre",
+    description: "Si vous êtes intéréssé par l'aquariophophilie naturelle, sans machine et sans changement d'eau, testez notre simulateur d'aquarium !",
+    url: "/images/og.png",
+    siteName: "Aquarelle",
+  }
 };
 
 export default function RootLayout({
