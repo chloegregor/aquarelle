@@ -1,13 +1,17 @@
 'use client';
-import Image from "next/image";
 import {useState, useEffect, useMemo, useCallback} from "react";
 import { Population } from "./population";
+import {FishCard} from "./fishCard";
 
 
 export function FilteredFishes({tankVolume, tankPh, tankTemp, tankRegion}) {
 
   const [fishes, setFishes] = useState ([]);
-  const [addedFish, setAddedFish] = useState ([]);
+  const [ population, setPopulation] = useState ({});
+
+  const ResetPopulation = () => {
+    setPopulation ({});
+  }
 
   useEffect (() => {
     const fetchFishes = async () => {
@@ -18,42 +22,47 @@ export function FilteredFishes({tankVolume, tankPh, tankTemp, tankRegion}) {
     fetchFishes ();
   }, []);
 
-  const population = useMemo (() => {
-    return addedFish.reduce((acc, fish) => {
-    const initialCount = fish.minIndividuals - 1;
-    acc[fish.species] = (acc[fish.species] || initialCount) + 1;
-    return acc;
-  }, {});
-  }, [addedFish]);
+
+  const fishMap = useMemo(() => {
+  return Object.fromEntries(fishes.map(f => [f.species, f] ))
+}, [fishes]);
 
 
 
-  const minTankSizes = Object.entries(population).map(([species, qty]) => {
-    const fish = fishes.find(f => f.species === species);
-    return fish ? fish.minTankSize : 0
-  });
+  const minimumVolume = Object.keys(population).reduce((max, species) =>
+  {
+    const fish = fishMap[species];
+    if (fish) {
+      const requiredVolume = fish.minTankSize;
+      const volume = requiredVolume > max.volume ? requiredVolume : max.volume;
+      return { species, volume: volume };
 
-  const minimumVolume = minTankSizes.length > 0 ? Math.max(...minTankSizes) : 0;
+    }
+
+  }, { species: null, volume: 0 });
+
+  console.log("minimumVolume:", minimumVolume);
+
 
   const occupiedVolume = useMemo(() => {
     const getMinusLiterByFish = (fish, qty) => {
       return (fish.minusLiters / fish.minIndividuals) * qty;
     }
-    return population ? Object.entries(population).reduce((total, [species, qty]) => {
-      const fish = fishes.find(f => f.species === species);
+    return population ? Object.entries(population).reduce((total, [species, {qty}]) => {
+      const fish = fishMap[species];
       return total + getMinusLiterByFish(fish, qty);
     }, 0) : 0;
-  }, [population, fishes]);
+  }, [population, fishMap]);
 
 
   const newVolume = tankVolume - occupiedVolume;
-
+  console.log("newVolume:", newVolume);
 
 
   const isSelectable = useCallback((fish) => {
     const errors = [];
-    const fishQty = population[fish.species] || 0;
-    const fishIndice = fishQty > 0 ? (fish.minusLiters / fishQty) : fish.minusLiters;
+    const fishQty = population[fish.species]?.qty || 0;
+    const fishIndice = fishQty > 0 ? (fish.minusLiters / fish.minIndividuals) : fish.minusLiters;
     const remainingVolume = newVolume - fishIndice;
 
       if (fish.minTankSize > tankVolume) {
@@ -73,14 +82,24 @@ export function FilteredFishes({tankVolume, tankPh, tankTemp, tankRegion}) {
         errors.push("region");
       }
 
+      if (fish.extraSpeciesAggression && Object.entries(population).some (([species, qty]) => {
+        return fishMap[species].extraSpeciesAggression && species !== fish.species;
+      })
+      ) {
+        errors.push ("compatibility");
+      }
+
+      if (fish.intraSpeciesAggression && fishQty > 0) {
+        errors.push ("compatibility");
+      }
+
       if (errors.length > 0) {
         return {ok: false, errors}
-
       }
       return {ok: true, errors: []}
 
     ;
-  }, [newVolume, tankPh, tankTemp, tankRegion, tankVolume, population]);
+  }, [newVolume, tankPh, tankTemp, tankRegion, tankVolume, population, fishMap]);
 
   const calculatedResult = useMemo(() => {
     return fishes.map(fish => ({
@@ -92,45 +111,58 @@ export function FilteredFishes({tankVolume, tankPh, tankTemp, tankRegion}) {
 
   )
 
+  console.log ("calculatedResult:", calculatedResult);
+
+
+  const addFish = (fish) => {
+    setPopulation (prev => {
+      const currentFish = prev[fish.species];
+      const currentQty = currentFish ? currentFish.qty : fish.minIndividuals - 1;
+      const newQty = currentQty + 1;
+
+      return {
+        ...prev,
+        [fish.species]: {qty:newQty, data: fish}
+      };
+    })
+  }
+
+  const removeFish = (fish) => {
+    setPopulation (prev => {
+      const currentFish = prev[fish.species];
+      const currentQty = currentFish ? currentFish.qty : 0;
+
+      if (currentQty > fish.minIndividuals){
+        const newQty = currentQty -1;
+        const species = fish.species;
+        return {
+          ...prev,
+          [species]: {...prev[species], qty:newQty}
+        };
+      }else {
+        const newPop = {...prev};
+        delete newPop[fish.species];
+        return newPop;
+      }
+    })
+  }
+
+
   return (
     <>
-    <div className ="lg:flex h-[100%]">
+    <div className ="flex flex-col-reverse lg:flex-row h-[100%] ">
 
-      <div className="flex gap-5 lg:w-[50%] flex-wrap h-[100%] overflow-scroll">
+      <div className="grid lg:grid-cols-4 grid-cols-2 content-start lg:w-[60%] lg:px-[1em] px-[0.2em]  h-[50%] lg:h-[100%] overflow-scroll gap-[0.2em] lg:gap-0 border border-gray-300 pt-[0.2em] lg:pt-0 lg:border-none ">
         {calculatedResult.map (({fish, result}) => (
 
-          <div key={fish.species} className="flex flex-col items-center w-[12em] h-[18em]">
-
-            <h2>{fish.species} {fish.minIndividuals > 1 ? `(min.${fish.minIndividuals})` : ""}</h2>
-            <Image src="/images/maxresdefault.jpg" alt={fish.species} width={200} height={200} className={result.ok ? '' : 'grayscale'} />
-            <div className="flex gap-2 flex-wrap justify-center"><span className={result.errors.includes("temperature") ? "rouge" : "green"}>{fish.minTemp}°-{fish.maxTemp}°</span><span className={result.errors.includes("pH") ? "rouge" : "green"} >pH: {fish.minPh}-{fish.maxPh}</span><span className={result.errors.includes("region") ? "rouge" : "green"}>{fish.region}</span><span className="rouge">{result.errors.includes('population') ? "L'aquarium est trop petit" : ""}</span>
-            </div>
-            <div className="flex justify-center gap-5 picnic text-[3em] w-full">
-              <span className="bleu" onClick={() => {
-                const result = isSelectable(fish)
-                if (result.ok) {
-                  setAddedFish([...addedFish, fish]);
-                }
-              }}>+
-              </span>
-              <span className="rouge grayscale-0" onClick ={() => {
-
-                const index = addedFish.findIndex(f => f.species === fish.species);
-                if (index > -1) {
-                  const newAddedFish = [...addedFish];
-                  newAddedFish.splice(index, 1);
-                  setAddedFish(newAddedFish);
-                }
-              }}>
-                -
-              </span>
-            </div>
+          <div key={fish.species} className="">
+            <FishCard fish={fish} result={result} addFish={addFish} removeFish={removeFish} population={population} />
           </div>
 
         ))}
       </div>
-      <div className=" lg:w-[50%]">
-        <Population fish={population} volume={newVolume} minimumVolume={minimumVolume} originalVolume={tankVolume}/>
+      <div className=" lg:w-[40%] lg:h-[100%] h-[50%] lg:border-l-1 lg:border-gray-300">
+        <Population fish={population} volume={newVolume} minimumVolume={minimumVolume} originalVolume={tankVolume} tankPh={tankPh} tankTemp={tankTemp} tankRegion={tankRegion} reset={ResetPopulation}/>
       </div>
     </div>
     </>);

@@ -1,14 +1,31 @@
 [
   {
+    "species": "poisson rouge",
+    "region":"asia",
+    "minIndividuals": 3,
+    "minTemp": 18,
+    "maxTemp": 22,
+    "minPh": 6,
+    "maxPh": 8,
+    "minTankSize": 300,
+    "minusLiters": 300,
+    "intraSpeciesAggression": false,
+    "extraSpeciesAggression": false,
+    "img":"poisson-rouge.png"
+  },
+  {
     "species":"rasbora maculata",
     "region":"asia",
     "minIndividuals": 6,
-    "minTemp": 22,
+    "minTemp": 23,
     "maxTemp": 28,
     "minPh": 6,
     "maxPh": 7.5,
     "minTankSize": 30,
-    "minusLiters": 15
+    "minusLiters": 25,
+    "intraSpeciesAggression": false,
+    "extraSpeciesAggression": false,
+    "img":"rasbora-maculata.png"
 
   },
   {
@@ -19,19 +36,27 @@
     "maxTemp": 26,
     "minPh": 6,
     "maxPh": 7,
-    "minTankSize": 100,
-    "minusLiters": 25
+    "minTankSize": 110,
+    "minusLiters": 60,
+    "intraSpeciesAggression": false,
+    "extraSpeciesAggression": false,
+    "img":"neon-tetra.png"
+
   },
   {
     "species":"betta splendens",
     "region":"asia",
     "minIndividuals": 1,
+    "maxIndividuals": 1,
     "minTemp": 24,
     "maxTemp": 30,
     "minPh": 6,
     "maxPh": 8,
     "minTankSize": 30,
-    "minusLiters": 10
+    "minusLiters": 30,
+    "intraSpeciesAggression": true,
+    "extraSpeciesAggression": true,
+    "img":"betta-splendens.png"
   },
   {
     "species":"gourami nain",
@@ -41,8 +66,11 @@
     "maxTemp": 28,
     "minPh": 6,
     "maxPh": 7.5,
-    "minTankSize": 60,
-    "minusLiters": 30
+    "minTankSize": 100,
+    "minusLiters": 70,
+    "intraSpeciesAggression": false,
+    "extraSpeciesAggression": true,
+    "img":"gourami-nain.png"
   },
   {
     "species":"rasbora espei",
@@ -53,6 +81,158 @@
     "minPh": 6,
     "maxPh": 7.5,
     "minTankSize": 50,
-    "minusLiters": 20
+    "minusLiters": 40,
+    "intraSpeciesAggression": false,
+    "extraSpeciesAggression": false,
+    "img":"rasbora-espei.png"
+  },
+  {
+    "species":"corydoras panda",
+    "region":"south america",
+    "minIndividuals": 6,
+    "minTemp": 22,
+    "maxTemp": 26,
+    "minPh": 6,
+    "maxPh": 7.5,
+    "minTankSize": 80,
+    "minusLiters": 40,
+    "intraSpeciesAggression": false,
+    "extraSpeciesAggression": false,
+    "img":"corydoras-panda.png"
+  },
+
+  {
+    "species": "ramirezi",
+    "region":"south america",
+    "minIndividuals": 2,
+    "minTemp": 24,
+    "maxTemp": 28,
+    "minPh": 6,
+    "maxPh": 7,
+    "minTankSize": 100,
+    "minusLiters": 60,
+    "intraSpeciesAggression": false,
+    "extraSpeciesAggression": true,
+    "img":"ramirezi.png"
+  },
+
+  {
+    "species":"danio rerio",
+    "region":"asia",
+    "minIndividuals": 6,
+    "minTemp": 20,
+    "maxTemp": 26,
+    "minPh": 6,
+    "maxPh": 7.5,
+    "minTankSize": 100,
+    "minusLiters": 60,
+    "intraSpeciesAggression": false,
+    "extraSpeciesAggression": false,
+    "img":"danio-rerio.png"
+  },
+
+  {
+    "species":"guppy",
+    "region":"south america",
+    "minIndividuals": 6,
+    "minTemp": 22,
+    "maxTemp": 28,
+    "minPh": 6,
+    "maxPh": 8,
+    "minTankSize": 80,
+    "minusLiters": 60,
+    "intraSpeciesAggression": false,
+    "extraSpeciesAggression": false,
+    "img":"guppy.png"
+  },
+
+  {
+    "species": "barbus de sumatra",
+    "region":"asia",
+    "minIndividuals": 8,
+    "minTemp": 22,
+    "maxTemp": 26,
+    "minPh": 6,
+    "maxPh": 7.5,
+    "minTankSize": 150,
+    "minusLiters": 90,
+    "intraSpeciesAggression": false,
+    "extraSpeciesAggression": false,
+    "img":"barbus-de-sumatra.png"
+  },
+
+  {
+    "species": "tetra amande",
+    "region":"south america",
+    "minIndividuals": 6,
+    "minTemp": 22,
+    "maxTemp": 28,
+    "minPh": 6,
+    "maxPh": 7.5,
+    "minTankSize": 30,
+    "minusLiters": 20,
+    "intraSpeciesAggression": false,
+    "extraSpeciesAggression": false,
+    "img":"tetra-amande.png"
+  },
+  {
+    "species": "rasbora galaxy",
+    "region":"asia",
+    "minIndividuals": 6,
+    "minTemp": 24,
+    "maxTemp": 28,
+    "minPh": 6,
+    "maxPh": 7.5,
+    "minTankSize": 30,
+    "minusLiters": 20,
+    "intraSpeciesAggression": false,
+    "extraSpeciesAggression": false,
+    "img":"rasbora-galaxy.png"
+  },
+  {
+    "species": "tanicthys albonubes",
+    "region":"asia",
+    "minIndividuals": 8,
+    "minTemp": 22,
+    "maxTemp": 26,
+    "minPh": 6,
+    "maxPh": 7.5,
+    "minTankSize": 80,
+    "minusLiters": 60,
+    "intraSpeciesAggression": false,
+    "extraSpeciesAggression": false,
+    "img":"tanicthys.png"
+  },
+
+  {
+    "species": "gourami grogneur",
+    "region":"asia",
+    "minIndividuals": 2,
+    "minTemp": 24,
+    "maxTemp": 28,
+    "minPh": 6,
+    "maxPh": 7.5,
+    "minTankSize": 50,
+    "minusLiters": 35,
+    "intraSpeciesAggression": false,
+    "extraSpeciesAggression": true,
+    "img":"gourami-grogneur.png"
+  },
+  {
+    "species": "guppy endler",
+    "region":"south america",
+    "minIndividuals": 6,
+    "minTemp": 22,
+    "maxTemp": 28,
+    "minPh": 6,
+    "maxPh": 8,
+    "minTankSize": 60,
+    "minusLiters": 30,
+    "intraSpeciesAggression": false,
+    "extraSpeciesAggression": false,
+    "img":"guppy_endler.png"
   }
+
+
+
 ]

@@ -10,8 +10,8 @@ export function AquariumApp() {
   return (
     <>
 
-      <div className="flex flex-col gap-10 fixed bottom-0 border w-full items-center h-[10em] bg-white">
-        <div className="flex gap-10">
+      <div className="flex flex-col lg:gap-10 gap-5 absolute bottom-0 border border-gray-300 w-full items-center h-[10em] bg-white px-[5px]">
+        <div className="flex lg:gap-10 gap-5">
           <div className="flex flex-col">
             <label htmlFor="tankVolume">{tankVolume} litres</label>
             <input className="w-[10em]"
@@ -37,7 +37,7 @@ export function AquariumApp() {
             />
           </div>
         </div>
-        <div className="flex gap-10">
+        <div className="flex lg:gap-10 gap-5">
           <div className="flex flex-col">
             <label htmlFor="tankTemp">{tankTemp}°C: </label>
             <input
@@ -66,7 +66,7 @@ export function AquariumApp() {
         </div>
 
       </div>
-      <div className=" h-[100%] pb-[10em]">
+      <div className=" h-[100%] pb-[10em] ">
       <FilteredFishes tankVolume={tankVolume} tankPh={tankPh} tankTemp={tankTemp} tankRegion={tankRegion} />
       </div>
     </>
