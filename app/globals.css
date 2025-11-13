@@ -8,6 +8,7 @@
 
 html{
   height: 100%;
+  margin: 0;
 }
 
 @font-face {
@@ -64,6 +65,7 @@ body {
   height: 100%;
   font-family: 'Nata', sans-serif;
   font-size: 1em;
+  margin: 0;
 }
 
 .readme {

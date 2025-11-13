@@ -66,7 +66,7 @@ export function AquariumApp() {
         </div>
 
       </div>
-      <div className=" h-[100%] pb-[10em] ">
+      <div className=" h-[100%] ">
       <FilteredFishes tankVolume={tankVolume} tankPh={tankPh} tankTemp={tankTemp} tankRegion={tankRegion} />
       </div>
     </>
