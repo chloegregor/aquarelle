@@ -1,4 +1,3 @@
-import Image from "next/image";
 export function ProgressionBar({percentage}) {
   return (
     <div className="flex justify-end w-full lg:h-5 h-1 relative"

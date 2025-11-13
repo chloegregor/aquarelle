@@ -32,7 +32,7 @@ html{
 }
 
 .bleu {
-  color: #0583ad;
+  color: #71b15f;
 }
 
 .rouge {
@@ -132,13 +132,16 @@ h1{
 .bouton{
   background-color: #ffffff;
   color: #000000;
-  border: 1px solid #0583ad;
+  border: 1px solid #71b15f;
   border-radius: 2em;
   padding: 0.2em 0.6em;
 }
 
 .bouton:hover{
-  color: #0583ad;
+  color: #71b15f;
   transition:  color 0.2s ease-in-out;
 }
 
+.deco-bleu{
+  text-decoration-color: #71b15f;
+}

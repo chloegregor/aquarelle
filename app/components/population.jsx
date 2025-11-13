@@ -4,10 +4,6 @@ import { ProgressionBar } from "./progressionBar";
 
 export function Population({ fish, volume, minimumVolume, originalVolume, reset, tankPh, tankTemp, tankRegion }) {
 
-  console.log("Population component - volume:", volume);
-  console.log("Population component - minimumVolume:", minimumVolume);
-  console.log("Population component - originalVolume:", originalVolume);
-  console.log("Population component - fish:", fish);
 
 
 
@@ -68,7 +64,7 @@ export function Population({ fish, volume, minimumVolume, originalVolume, reset,
             ))}
           </div>
           <div className="mt-auto text-end mr-[1em]">
-            <button onClick={reset} className="cursor-pointer hover:underline bleu mb-[0.5em] text-[0.6em] lg:text-[0.9em]">Vider l'aquarium</button>
+            <button onClick={reset} className="cursor-pointer hover:underline  mb-[0.5em] text-[0.6em] lg:text-[0.9em]">Vider l'aquarium</button>
             <ProgressionBar percentage={Math.min(100, Math.max(0, ((originalVolume - volume) / originalVolume) * 100))} />
           </div>
         </div>

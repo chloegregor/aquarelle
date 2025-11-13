@@ -41,7 +41,6 @@ export function FilteredFishes({tankVolume, tankPh, tankTemp, tankRegion}) {
 
   }, { species: null, volume: 0 });
 
-  console.log("minimumVolume:", minimumVolume);
 
 
   const occupiedVolume = useMemo(() => {
@@ -56,7 +55,6 @@ export function FilteredFishes({tankVolume, tankPh, tankTemp, tankRegion}) {
 
 
   const newVolume = tankVolume - occupiedVolume;
-  console.log("newVolume:", newVolume);
 
 
   const isSelectable = useCallback((fish) => {
@@ -111,7 +109,6 @@ export function FilteredFishes({tankVolume, tankPh, tankTemp, tankRegion}) {
 
   )
 
-  console.log ("calculatedResult:", calculatedResult);
 
 
   const addFish = (fish) => {

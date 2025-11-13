@@ -1,32 +1,20 @@
-'use client';
 import Link from "next/link";
-import {useState, useEffect} from 'react';
 import { Plants } from './components/plants.jsx';
 
 
-export default function Home() {
+export default async function Home() {
 
   type Plant = {
     img : string;
     index: number;
   }
+  console.log("env", process.env.NEXT_PUBLIC_BASE_URL);
 
-  const [plants, setPlants] = useState<Plant[]>([]);
+      const response = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/data/plants.json`);
+      const data : Plant[]= await response.json();
+      const plants :Plant[] = data.map((plant, index) => ({...plant, index}));
 
 
-
-  useEffect(() => {
-    async function fetchPlants() {
-      const response = await fetch('/data/plants.json');
-      const data = await response.json();
-      const dataWithIndex = data.map((plant, index) => ({...plant, index}));
-      setPlants(dataWithIndex);
-    }
-    fetchPlants();
-  }, []);
-  if (!plants?.length) return null;
-
-  console.log(plants);
 
   return (
     <>

@@ -2,7 +2,6 @@ import Image from "next/image";
 
 
 export function FishCard({fish, result, addFish, removeFish, population}) {
-  console.log("FishCard - fish:", fish);
 
   return (
     <div key={fish.species} className="flex flex-col items-center  ">
