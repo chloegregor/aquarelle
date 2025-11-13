@@ -32,16 +32,14 @@ html{
 }
 
 .bleu {
-  color: #56bbaa;
+  color: #0583ad;
 }
 
 .rouge {
   color: #bb5656;
 }
 
-.green {
-  color: #56bb78;
-}
+
 
 
 @theme inline {
@@ -74,7 +72,11 @@ body {
 h1{
   font-family: 'PicNic', sans-serif;
   margin: 0;
-  color : #56bbaa;
+  background: linear-gradient(90deg, #0583ad, #b4cd2f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; /* Chrome/Safari */
+  background-clip: text; /* Firefox */
+  color: transparent;
 }
 
 .rotateInLeft {
@@ -130,12 +132,13 @@ h1{
 .bouton{
   background-color: #ffffff;
   color: #000000;
-  border: 1px solid #339988;
+  border: 1px solid #0583ad;
   border-radius: 2em;
   padding: 0.2em 0.6em;
 }
 
 .bouton:hover{
-  color: #339988;
+  color: #0583ad;
   transition:  color 0.2s ease-in-out;
 }
+

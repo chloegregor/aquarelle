@@ -152,7 +152,7 @@ export function FilteredFishes({tankVolume, tankPh, tankTemp, tankRegion}) {
     <>
     <div className ="flex flex-col-reverse lg:flex-row h-[100%] ">
 
-      <div className="grid lg:grid-cols-4 grid-cols-2 content-start lg:w-[60%] lg:px-[1em] px-[0.2em]  h-[50%] lg:h-[100%] overflow-scroll gap-[0.2em] lg:gap-0 border border-gray-300 pt-[0.2em] lg:pt-0 lg:border-none ">
+      <div className="grid lg:grid-cols-4 grid-cols-3 text-[0.6em] lg:text-[1em] content-start lg:w-[60%] lg:px-[1em] px-[0.2em]  h-[50%] lg:h-[100%] overflow-scroll gap-[0.2em] lg:gap-0 border border-gray-300 pt-[0.2em] lg:pt-0 lg:border-none ">
         {calculatedResult.map (({fish, result}) => (
 
           <div key={fish.species} className="">
