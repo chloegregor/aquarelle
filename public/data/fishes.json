@@ -53,7 +53,7 @@
     "minPh": 6,
     "maxPh": 8,
     "minTankSize": 30,
-    "minusLiters": 30,
+    "minusLiters": 20,
     "intraSpeciesAggression": true,
     "extraSpeciesAggression": true,
     "img":"betta-splendens.png"
@@ -155,7 +155,7 @@
     "minPh": 6,
     "maxPh": 7.5,
     "minTankSize": 150,
-    "minusLiters": 90,
+    "minusLiters": 100,
     "intraSpeciesAggression": false,
     "extraSpeciesAggression": false,
     "img":"barbus-de-sumatra.png"

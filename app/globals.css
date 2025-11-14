@@ -145,3 +145,16 @@ h1{
 .deco-bleu{
   text-decoration-color: #71b15f;
 }
+
+.swimming{
+  animation: swimming 3s ease-in-out infinite;
+}
+
+@keyframes swimming {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+}
