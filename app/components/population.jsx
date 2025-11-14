@@ -50,7 +50,7 @@ export function Population({ fish, volume, minimumVolume, originalVolume, reset,
       <div className="h-full flex flex-col relative text-center">
 
         <div className="h-[100%] flex flex-col">
-          <div className="grid h-[90%] lg:grid-cols-3 grid-cols-3 lg:gap-[2em] m-auto ml-[1em] mr-[1em]  ">
+          <div className="grid max-h-[90%] lg:grid-cols-3 grid-cols-3 gap-[0.2em] m-auto ml-[1em] mr-[1em]  ">
             {FinalList.map(({data, result}) => (
 
               <div key={data.data.species} className="flex flex-col items-center w-full relative ">
