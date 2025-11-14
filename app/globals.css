@@ -158,3 +158,16 @@ h1{
     transform: translateX(5px);
   }
 }
+
+.plantmoving{
+  animation: plantmoving 4s ease-in-out infinite;
+}
+
+@keyframes plantmoving {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(5deg)
+  }
+}
