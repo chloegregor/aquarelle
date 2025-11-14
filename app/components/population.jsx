@@ -50,7 +50,7 @@ export function Population({ fish, volume, minimumVolume, originalVolume, reset,
       <div className="h-full flex flex-col relative text-center">
 
         <div className="h-[100%] flex flex-col">
-          <div className="grid max-h-[90%] lg:grid-cols-3 grid-cols-3 gap-[0.2em] m-auto ml-[1em] mr-[1em]  ">
+          <div className="grid   lg:grid-cols-4 grid-cols-3 lg:gap-[0.1em] gap-[0.2em] m-auto ml-[1em] mr-[1em]  ">
             {FinalList.map(({data, result}) => (
 
               <div key={data.data.species} className="flex flex-col items-center w-full relative ">
@@ -63,8 +63,8 @@ export function Population({ fish, volume, minimumVolume, originalVolume, reset,
               </div>
             ))}
           </div>
-          <div className=" text-end mr-[1em]">
-            <button onClick={reset} className="cursor-pointer hover:underline  mb-[0.5em] text-[0.6em] lg:text-[0.9em]">Vider l'aquarium</button>
+          <div className=" text-end ">
+            <button onClick={reset} className=" mr-[1em] cursor-pointer hover:underline  mb-[0.5em] text-[0.6em] lg:text-[0.9em]">Vider l'aquarium</button>
             <ProgressionBar percentage={Math.min(100, Math.max(0, ((originalVolume - volume) / originalVolume) * 100))} />
           </div>
         </div>

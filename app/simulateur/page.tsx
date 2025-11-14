@@ -16,7 +16,7 @@ export default function Simulateur() {
         <h1 className="lg:text-[7em] text-[2.5em]">aquarelle</h1>
       </div>
     </header>
-    <main className=" h-[90%] lg:pb-[8em]  pb-[6.5em] lg:h-[75%]  ">
+    <main className=" h-[90%] lg:pb-[7em]  pb-[6.5em] lg:h-[75%]  ">
       <AquariumApp />
 
     </main>
