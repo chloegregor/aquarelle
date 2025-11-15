@@ -11,7 +11,8 @@
     "minusLiters": 300,
     "intraSpeciesAggression": false,
     "extraSpeciesAggression": false,
-    "img":"poisson-rouge.png"
+    "img":"poisson-rouge.png",
+    "description":"Le poisson rouge est un poisson d'eau froide, ce qui signifie qu'il peut tolérer des températures plus basses que de nombreux autres poissons d'aquarium. Cependant, il est important de maintenir une température stable pour éviter le stress."
   },
   {
     "species":"rasbora maculata",
@@ -25,7 +26,8 @@
     "minusLiters": 25,
     "intraSpeciesAggression": false,
     "extraSpeciesAggression": false,
-    "img":"rasbora-maculata.png"
+    "img":"rasbora-maculata.png",
+    "description":"Le rasbora maculata, également connu sous le nom de rasbora tacheté, est un petit poisson d'eau douce originaire d'Asie du Sud-Est. Il est apprécié pour ses couleurs vives et son comportement paisible en groupe."
 
   },
   {
@@ -40,7 +42,8 @@
     "minusLiters": 60,
     "intraSpeciesAggression": false,
     "extraSpeciesAggression": false,
-    "img":"neon-tetra.png"
+    "img":"neon-tetra.png",
+    "description":"Le néon tetra est un petit poisson d'eau douce originaire d'Amérique du Sud, particulièrement apprécié pour ses couleurs vives et son comportement paisible en groupe. Il est souvent maintenu dans des aquariums communautaires."
 
   },
   {
@@ -56,7 +59,8 @@
     "minusLiters": 20,
     "intraSpeciesAggression": true,
     "extraSpeciesAggression": true,
-    "img":"betta-splendens.png"
+    "img":"betta-splendens.png",
+    "description":"Le Betta splendens, également connu sous le nom de poisson combattant, est un poisson d'eau douce originaire d'Asie du Sud-Est. Il est célèbre pour ses couleurs vives et ses nageoires spectaculaires. Cependant, il est important de noter que les mâles sont très territoriaux et agressifs envers d'autres mâles de la même espèce."
   },
   {
     "species":"gourami nain",
@@ -70,7 +74,8 @@
     "minusLiters": 70,
     "intraSpeciesAggression": false,
     "extraSpeciesAggression": true,
-    "img":"gourami-nain.png"
+    "img":"gourami-nain.png",
+    "description":"Le gourami nain est un petit poisson d'eau douce originaire d'Asie du Sud-Est. Il est apprécié pour ses couleurs vives et son comportement paisible en groupe. Cependant, il peut être territorial envers d'autres poissons, surtout pendant la période de reproduction."
   },
   {
     "species":"rasbora espei",
@@ -84,7 +89,8 @@
     "minusLiters": 40,
     "intraSpeciesAggression": false,
     "extraSpeciesAggression": false,
-    "img":"rasbora-espei.png"
+    "img":"rasbora-espei.png",
+    "description":"Le rasbora espei, également connu sous le nom de rasbora arlequin, est un petit poisson d'eau douce originaire d'Asie du Sud-Est. Il est apprécié pour ses couleurs vives et son comportement paisible en groupe."
   },
   {
     "species":"corydoras panda",
@@ -98,7 +104,8 @@
     "minusLiters": 40,
     "intraSpeciesAggression": false,
     "extraSpeciesAggression": false,
-    "img":"corydoras-panda.png"
+    "img":"corydoras-panda.png",
+    "description":"Le Corydoras panda est un petit poisson d'eau douce originaire d'Amérique du Sud, particulièrement apprécié pour ses couleurs contrastées rappelant celles d'un panda. Il est connu pour son comportement paisible et sa tendance à vivre en groupe au fond de l'aquarium."
   },
 
   {
@@ -113,7 +120,8 @@
     "minusLiters": 60,
     "intraSpeciesAggression": false,
     "extraSpeciesAggression": true,
-    "img":"ramirezi.png"
+    "img":"ramirezi.png",
+    "description":"Le ramirezi, également connu sous le nom de cichlidé nain, est un petit poisson d'eau douce originaire d'Amérique du Sud. Il est apprécié pour ses couleurs vives et son comportement territorial, surtout pendant la période de reproduction."
   },
 
   {
@@ -128,7 +136,8 @@
     "minusLiters": 60,
     "intraSpeciesAggression": false,
     "extraSpeciesAggression": false,
-    "img":"danio-rerio.png"
+    "img":"danio-rerio.png",
+    "description":"Le Danio rerio, communément appelé poisson zèbre, est un petit poisson d'eau douce originaire d'Asie du Sud. Il est largement utilisé dans la recherche scientifique en raison de sa facilité de reproduction et de son développement rapide. En aquarium, il est apprécié pour son comportement actif et sa capacité à vivre en groupe."
   },
 
   {
@@ -143,7 +152,8 @@
     "minusLiters": 60,
     "intraSpeciesAggression": false,
     "extraSpeciesAggression": false,
-    "img":"guppy.png"
+    "img":"guppy.png",
+    "description":"Le guppy est un petit poisson d'eau douce originaire d'Amérique du Sud, particulièrement apprécié pour ses couleurs vives et sa facilité de reproduction en captivité. Il est souvent maintenu dans des aquariums communautaires en raison de son comportement paisible."
   },
 
   {
@@ -158,7 +168,8 @@
     "minusLiters": 100,
     "intraSpeciesAggression": false,
     "extraSpeciesAggression": false,
-    "img":"barbus-de-sumatra.png"
+    "img":"barbus-de-sumatra.png",
+    "description":"Le barbus de Sumatra est un poisson d'eau douce originaire d'Asie du Sud-Est, connu pour ses rayures noires distinctives et son comportement actif en groupe. Il est souvent maintenu dans des aquariums communautaires en raison de son tempérament paisible."
   },
 
   {
@@ -173,7 +184,8 @@
     "minusLiters": 20,
     "intraSpeciesAggression": false,
     "extraSpeciesAggression": false,
-    "img":"tetra-amande.png"
+    "img":"tetra-amande.png",
+    "description":"Le tetra amande, également connu sous le nom de tetra diamant, est un petit poisson d'eau douce originaire d'Amérique du Sud. Il est apprécié pour ses couleurs vives et son comportement paisible en groupe."
   },
   {
     "species": "rasbora galaxy",
@@ -187,7 +199,8 @@
     "minusLiters": 20,
     "intraSpeciesAggression": false,
     "extraSpeciesAggression": false,
-    "img":"rasbora-galaxy.png"
+    "img":"rasbora-galaxy.png",
+    "description":"Le rasbora galaxy, également connu sous le nom de rasbora étoilé, est un petit poisson d'eau douce originaire d'Asie du Sud-Est. Il est apprécié pour ses couleurs vives et son comportement paisible en groupe."
   },
   {
     "species": "tanicthys albonubes",
@@ -201,7 +214,8 @@
     "minusLiters": 60,
     "intraSpeciesAggression": false,
     "extraSpeciesAggression": false,
-    "img":"tanicthys.png"
+    "img":"tanicthys.png",
+    "description":"Le tanicthys albonubes, également connu sous le nom de poisson arc-en-ciel, est un petit poisson d'eau douce originaire d'Asie du Sud-Est. Il est apprécié pour ses couleurs vives et son comportement paisible en groupe."
   },
 
   {
@@ -216,7 +230,8 @@
     "minusLiters": 35,
     "intraSpeciesAggression": false,
     "extraSpeciesAggression": true,
-    "img":"gourami-grogneur.png"
+    "img":"gourami-grogneur.png",
+    "description":"Le gourami grogneur, également connu sous le nom de gourami à barbe, est un poisson d'eau douce originaire d'Asie du Sud-Est. Il est apprécié pour son comportement paisible et sa capacité à produire des sons de grognement, d'où son nom."
   },
   {
     "species": "guppy endler",
@@ -230,7 +245,8 @@
     "minusLiters": 30,
     "intraSpeciesAggression": false,
     "extraSpeciesAggression": false,
-    "img":"guppy_endler.png"
+    "img":"guppy_endler.png",
+    "description":"Le guppy Endler est une variété de guppy originaire du Venezuela, connue pour ses couleurs vives et son comportement paisible en groupe. Il est souvent maintenu dans des aquariums communautaires en raison de sa taille compacte et de sa facilité de reproduction."
   }
 
 

@@ -20,11 +20,12 @@ export default async function Home() {
     <>
     <main className="overflow-x-hidden">
       <div className="flex flex-col items-center h-[1900px] lg:h-[1500px] gap-5 ">
-          <div className="flex flex-col items-center relative ">
+          <div className="flex flex-col items-center relative h-[] ">
           <h1 className="lg:text-[11em] lg:text-[2.5em] text-[4.5em]">aquarelle</h1>
-          <h2 className="border-b-[1px] border-gray-300 w-[15em] absolute left-1/2 -translate-x-1/2 lg:bottom-5 -bottom-5">Simulateur d'aquarium naturel. </h2>
+          <h2 className="border-b-[1px] border-gray-300  text-[0.9em]">Simulateur d'aquarium naturel. </h2>
+
         </div>
-        <div className="lg:w-[600px] w-[20em] flex flex-col items-center gap-10 mt-15 relative">
+        <div className=" lg:w-[600px] w-[20em] flex flex-col items-center gap-10 mt-15 relative">
           <p className=""> L'écologiste Diane Walstad a developpé une méthode qui a révolutionné l’aquariophilie classique. Contrairement aux aquariums traditionnels qui nécessitent des changements d’eau fréquents et des filtres coûteux, cette approche consiste à recréer les conditions d'un écosystème équilibré:  Les bactéries présentes dans l'aquarium décomposent les déchets organiques qui deviennent assimilables par les plantes.</p>
           <p className=""> Les plantes sont essentielles à ce type d'aquariums naturels, aussi appellés aquariums "low-tech". Vous pouvez utiliser des plantes aquatiques en préparant un substrat naturel au fond du bac, des plantes flottantes ou des plantes vertes comme le pothos, le philodendron ou la monstera ! Il suffit qu'elles ait accès à suffisamment de lumière et de plonger leur racines dans l'eau. Toutes plantes à croissance rapide permettra d'éviter l'accumulation de déchets et le développement des algues.</p>
           <p> Sans effectuer de changement d'eau, il faudra tout de même remédier à l'évaporation de l'aquarium : c'est tout à fait possible en s'équipant d'un filtre à osmose inverse pour débarrasser l'eau courrante de ses mineraux afin de pas modifier le ph de votre aquarium, ou en utilisant de l'eau de pluie.</p>
@@ -34,7 +35,6 @@ export default async function Home() {
           <Plants   img={plants[0].img} width={"lg:w-[33em] w-[10em]"} absolute={"lg:-top-80 -top-55 -left-30 lg:-left-119"}  rotateWay={"rotateInRight"} rotate={true} key={plants[0].index} />
           <Plants   img={plants[3].img} width={"lg:w-[35em] w-[11em]"} absolute={"lg:-top-50 top-60 -right-25 lg:-right-103 hidden lg:block"}  rotateWay={"rotateInRight"} rotate={true} key={plants[3].index} />
           <Plants   img={plants[2].img} width={"lg:w-[25em] w-[6em]"} absolute={"lg:top-90 lg:-left-120 lg:block hidden "}  rotateWay={""} rotate={false} key={plants[4].index} />
-          <Plants  img={plants[4].img} width={"lg:w-[25em] w-[13em]"} absolute={" lg:top-180 top-340 lg:-right-30 -right-15 scale-x-[-1] hidden lg:block"}  rotateWay={"rotateInLeft"} rotate={true} key={plants[1].index} />
         </div>
       </div>
     </main>

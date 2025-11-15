@@ -2,12 +2,16 @@
 import {useState, useEffect, useMemo, useCallback} from "react";
 import { Population } from "./population";
 import {FishCard} from "./fishCard";
+import Image from "next/image";
+import {FishFiche} from "./fishFiche";
 
 
 export function FilteredFishes({tankVolume, tankPh, tankTemp, tankRegion}) {
 
   const [fishes, setFishes] = useState ([]);
   const [ population, setPopulation] = useState ({});
+  const [openFish, setOpenFish] = useState (null);
+  console.log("openFish:", openFish);
 
   const ResetPopulation = () => {
     setPopulation ({});
@@ -148,18 +152,22 @@ export function FilteredFishes({tankVolume, tankPh, tankTemp, tankRegion}) {
   return (
     <>
     <div className ="flex flex-col-reverse lg:flex-row h-[100%] ">
-
-      <div className="grid lg:grid-cols-3 grid-cols-3 text-[0.6em] lg:text-[1em] content-start lg:w-[50%] lg:px-[1em] px-[0.2em]  h-[50%] lg:h-[100%] overflow-scroll gap-[0.2em] lg:gap-2 border border-gray-300 pt-[0.2em] lg:pt-0 lg:border-none ">
-        {calculatedResult.map (({fish, result}) => (
-
-          <div key={fish.species} className="">
-            <FishCard fish={fish} result={result} addFish={addFish} removeFish={removeFish} population={population} />
+      <div className="relative lg:w-[50%] h-[50%] lg:h-[100%] border border-gray-300 lg:border-none">
+        <div className={`overflow-scroll h-[100%] lg:h-[100%] ${openFish ? "hidden" : "block"}`}>
+          <div className={`grid lg:grid-cols-3 grid-cols-2 text-[0.6em] lg:text-[1em] content-start lg:px-[1em] px-[0.2em] gap-[0.2em] lg:gap-2 pt-[0.2em] lg:pt-0}`}>
+            {calculatedResult.map (({fish, result}) => (
+              <div key={fish.species} className="">
+                <FishCard onClick={() => setOpenFish(fish)} fish={fish} result={result} addFish={addFish} removeFish={removeFish} population={population} />
+              </div>
+            ))}
           </div>
-
-        ))}
+        </div>
+        <div className="overflow-scroll h-[100%] lg:h-[100%]">
+          <FishFiche fish={openFish} onClose={() => setOpenFish(null)} />
+        </div>
       </div>
       <div className=" lg:w-[50%] lg:h-[100%] h-[50%] lg:border-l-1 lg:border-gray-300">
-        <Population fish={population} volume={newVolume} minimumVolume={minimumVolume} originalVolume={tankVolume} tankPh={tankPh} tankTemp={tankTemp} tankRegion={tankRegion} reset={ResetPopulation}/>
+        <Population fish={population} volume={newVolume} minimumVolume={minimumVolume} originalVolume={tankVolume} tankPh={tankPh} tankTemp={tankTemp} tankRegion={tankRegion} reset={ResetPopulation} minusFish={removeFish}/>
       </div>
     </div>
     </>);

@@ -64,6 +64,8 @@ body {
   font-family: 'Nata', sans-serif;
   font-size: 1em;
   margin: 0;
+  color: #4d4d4d;
+
 }
 
 .readme {
@@ -79,6 +81,15 @@ h1{
   color: transparent;
 }
 
+h2{
+  font-family: 'BBBReadMe', sans-serif;
+  /* background: linear-gradient(90deg, #b4cd2f, #0583ad);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; /* Chrome/Safari */
+  /* background-clip: text; Firefox */
+  /* color: transparent; */
+  color: #373937;
+}
 .rotateInLeft {
 
   animation: rotateInLeft 0.5s ease-out forwards;
@@ -131,7 +142,8 @@ h1{
 
 .bouton{
   background-color: #ffffff;
-  color: #000000;
+  color: #373937;
+;
   border: 1px solid #71b15f;
   border-radius: 2em;
   padding: 0.2em 0.6em;
