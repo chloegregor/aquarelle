@@ -10,7 +10,7 @@ export function AquariumApp() {
   return (
     <>
 
-      <div className="flex flex-col lg:gap-3  absolute bottom-0 border border-gray-300 w-full items-center lg:h-[7em] h-[6.5em] bg-white px-[5px]">
+      <div className="flex flex-col lg:gap-3  absolute bottom-0 border border-gray-300 w-full items-center lg:h-[7em] h-[6.5em] bg-white px-[5px] z-100">
         <div className="flex lg:gap-10 gap-5">
           <div className="flex flex-col">
             <label htmlFor="tankVolume">{tankVolume} litres</label>
