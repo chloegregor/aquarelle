@@ -162,9 +162,10 @@ export function FilteredFishes({tankVolume, tankPh, tankTemp, tankRegion}) {
             ))}
           </div>
         </div>
-        <div className="overflow-scroll h-[100%] lg:h-[100%]">
+        {openFish && <div className="overflow-scroll h-[100%] lg:h-[100%]">
           <FishFiche fish={openFish} onClose={() => setOpenFish(null)} />
-        </div>
+        </div>}
+
       </div>
       <div className=" lg:w-[50%] lg:h-[100%] h-[50%] lg:border-l-1 lg:border-gray-300">
         <Population fish={population} volume={newVolume} minimumVolume={minimumVolume} originalVolume={tankVolume} tankPh={tankPh} tankTemp={tankTemp} tankRegion={tankRegion} reset={ResetPopulation} minusFish={removeFish}/>
