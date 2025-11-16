@@ -9,7 +9,7 @@ export default function Simulateur() {
 
     <header className="lg:h-[25%] h-[10%] flex items-center relative">
       <div className="flex  lg:ml-[2em] ml-[1.1em] items-center lg:text-[1.1em] text-[0.8em]">
-        <Link href="/" className=""><Image src="/images/flèche3.png" alt="plante" width={50} height={15} className=""/>
+        <Link href="/" className=""><Image src="/images/flèche3.png" alt="retour" width={50} height={15} className=""/>
 </Link>
       </div>
       <div className="absolute left-1/2 -translate-x-1/2">
