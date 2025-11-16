@@ -24,6 +24,6 @@ export function Plants({img, absolute, width, rotateWay, rotate }) {
   })
   return (
 <div className ={`  absolute ${absolute} ${isClicked ? rotateWay : isClicked === false ? inverseRotate : rotate ? "plantmoving" : ""}`} onClick={onClick}>
-  <Image src={`/images/${img}`}alt="plant" width={300} height={300} className={width}/>
+  <Image src={`/images/${img}`}alt="plant" width={300} height={300} className={width} priority />
 </div>  )
 }

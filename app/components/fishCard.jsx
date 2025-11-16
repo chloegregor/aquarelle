@@ -9,7 +9,7 @@ export function FishCard({fish, result, addFish, removeFish, population, onClick
         <div onClick={onClick} className=" border border-gray-300 flex flex-col items-center p-2">
           <h2 className=" mb-[2em]">{fish.species} </h2>
           <div className= "relative">
-            <Image src={`/images/${fish.img}`} alt={fish.species} width={200} height={200} className={`${result.ok ? '' : 'grayscale'}`} />
+            <Image src={`/images/${fish.img}`} alt={fish.species} width={200} height={200} className={`${result.ok ? '' : 'grayscale'}`} priority />
             <div className={`${result.errors.includes("temperature") ? "rouge" : ""} absolute -top-[20px] left-2`}>{fish.minTemp}°-{fish.maxTemp}°</div><div className={`${result.errors.includes("pH") ? "rouge" : "gren"} absolute -top-[20px] right-2 `} >pH: {fish.minPh}-{fish.maxPh}</div><div className={`${result.errors.includes("region") ? "rouge" : ""} absolute bottom-0 right-2 `}>{fish.region == "asia" ? 'Asie' : fish.region == "south america" ? "Amazonie" : ""}</div>
             <div className="absolute bottom-0 left-2">{fish.minIndividuals > 1 ? `min.${fish.minIndividuals}` : ""}</div>
           </div>
